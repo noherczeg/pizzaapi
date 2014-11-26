@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: PizzaAPI
+    http:
+        encoding: UTF-8
+        force: true
+    datasource:
+        initialize: true
+        platform: hsqldb
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+---
+
+spring:
+    profiles: dev
+
+server:
+    port: 9000
+
+---
+
+spring:
+    profiles: prod
+
+server:
+    port: 9010
